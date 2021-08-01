@@ -1,6 +1,5 @@
 import { parse } from '@fortawesome/fontawesome-svg-core';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart
@@ -9,7 +8,7 @@ const Cart = (props) => {
     for(let i=0; i<cart.length; i++){
         const product = cart[i];
         total = total + product.price * product.quantity;
-        debugger       
+               
     }
     let shipping = 0;
     if(total > 35){
@@ -38,7 +37,9 @@ const Cart = (props) => {
             <p><small>Shipping: {shipping}</small></p>
             <p><small>Tax + VAT: {tax}</small></p>
             <p>Total : {grandTotal}</p>
-            <Link to="/review"><button className="main-button">Order Review</button></Link>
+            {
+                props.children
+            }
         </div> 
     );
 };

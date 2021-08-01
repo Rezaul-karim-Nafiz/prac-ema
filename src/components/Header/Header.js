@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../App';
 import logo from '../../images/logo.png';
 import './Header.css'
 
 const Header = () => {
-    return (
+     return (
         <div className='header'>
             <img src={logo}/>
             <nav>

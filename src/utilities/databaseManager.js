@@ -1,4 +1,4 @@
-const getUser = () => {
+   const getUser = () => {
     const existingUser = sessionStorage.getItem('userId');
     if (existingUser) {
         return existingUser; 
