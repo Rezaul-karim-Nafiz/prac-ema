@@ -21,6 +21,7 @@ function App() {
   return (
     <UserContext.Provider value= {[loggedInUser, setLoggedInUser]}>
       <h3>{loggedInUser.email}</h3>
+      <h3>{loggedInUser.name}</h3>
       <img style={{borderRadius: '50%'}} src={loggedInUser.photo} alt="" />
       <Header />
         <Switch>
